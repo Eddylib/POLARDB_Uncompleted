@@ -1,0 +1,5 @@
+*.o
+.idea
+test/test
+cmake-build-debug
+lib

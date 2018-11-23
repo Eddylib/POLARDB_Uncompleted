@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <map>
+#include <engine_race.h>
 #include "util.h"
 #include "engine_example.h"
 
@@ -11,7 +12,7 @@ namespace polar_race {
 static const char kLockFile[] = "LOCK";
 
 RetCode Engine::Open(const std::string& name, Engine** eptr) {
-  return EngineExample::Open(name, eptr);
+  return EngineRace::Open(name, eptr);
 }
 
 Engine::~Engine() {
